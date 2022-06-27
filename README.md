@@ -7,5 +7,5 @@ I've been inspired by a video of robotic contest
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Jjuc5SBl25w" target="_blank">
  <img src="http://img.youtube.com/vi/Jjuc5SBl25w/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
 </a><br/>
-There are many other videos and projects like that, tha main idea is that, there is labyrinh for roboic car drawn on flad surface (2d labyrinth), supposing that robot can follow only lines using own ligth sensors that sense only small porion of surface under robot (therefore robot can't see whole labyrhinth at once)
+There are many other videos and projects like that, tha main idea is that, there is labyrinh for roboic car drawn on flad surface (2d labyrinth), supposing that robot can follow only lines using own ligth sensors that sense only small porion of surface under robot (therefore robot can't see whole labyrhinth at once). There is two tasks for robot, find a way out and remember the best way out to repeat late. Additionaly there is supposed that we do not have looped labyrinth i.e. there is only one way out and any way should bring us to either finish point or dead end.
 
