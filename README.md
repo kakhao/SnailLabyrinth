@@ -1,0 +1,2 @@
+# SnailLabyrinth
+Snail Labyrinth Challenge
