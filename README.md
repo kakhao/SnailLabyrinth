@@ -15,5 +15,3 @@ There are many other videos and projects like that, tha main idea is that, there
 Give this task to your friends, kids. They can try to play even without computer, because algorithm can be done on piece of paper. Great task for classrooms, you can create variations on your own, although there are several variants of the game explained here.
 Check the [wiki](https://github.com/kakhao/SnailLabyrinth/wiki) for details
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Kde-H2LuM0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
