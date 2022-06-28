@@ -1,7 +1,7 @@
 # Snail Labyrinth Challenge
 [![Wiki](https://badgen.net/badge/icon/wiki?icon=wiki&label)](https://github.com/kakhao/SnailLabyrinth/wiki)
 
-For everyone who learns programming or just watns to be in shape.
+For everyone who learns programming or just wants to be in shape.
 
 ## Introduction
 First of all this chalange isn't to learn any certain programming language, just to train in algorithmic thinking, alhough for realisation of contest enviromen used <a href="https://unity.com/">Unity</a> and <a href ="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a>. Everithing are free to use for learn. Altho you can try play without any environment and even without computer.
