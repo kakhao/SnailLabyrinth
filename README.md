@@ -14,3 +14,6 @@ I've been inspired by a video of robotic contest
 There are many other videos and projects like that, tha main idea is that, there is labyrinh for roboic car drawn on flad surface (2d labyrinth), supposing that robot can follow only lines using own ligth sensors that sense only small porion of surface under robot (therefore robot can't see whole labyrhinth at once). There is two tasks for robot, find a way out and remember the best way out to repeat late. Additionaly there is supposed that we do not have looped labyrinth i.e. there is only one way out and any way should bring us to either finish point or dead end. But in our project we may accept loops, this whould be an option for chalange.
 Give this task to your friends, kids. They can try to play even without computer, because algorithm can be done on piece of paper. Great task for classrooms, you can create variations on your own, although there are several variants of the game explained here.
 Check the [wiki](https://github.com/kakhao/SnailLabyrinth/wiki) for details
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Kde-H2LuM0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
