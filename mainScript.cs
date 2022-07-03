@@ -218,12 +218,11 @@ public class mainScript : MonoBehaviour
                         Cells.Contains(sPos + new Vector2Int(-DirV.y, DirV.x)),
                         Cells.Contains(sPos + DirV),
                         Cells.Contains(sPos + new Vector2Int(DirV.y, -DirV.x)));
-                    int moveD = 0;
 
                     switch (c)
                     {
                         case SnailCommand.MoveForward:
-                            moveD = 1;
+                            SnailPositions[SnailI] += SnailDirTempl[DirI];
                             break;
                         case SnailCommand.TurnRight:
                             DirI++;
@@ -237,7 +236,7 @@ public class mainScript : MonoBehaviour
                             break;
                     }
                     SnailDirections[SnailI] = DirI;
-                    SnailPositions[SnailI] += moveD * SnailDirTempl[DirI];
+                    ;
 
                 }
 
@@ -325,10 +324,7 @@ public class mainScript : MonoBehaviour
             GUI.Label(new Rect(10, ly0, 190, 60), s);
             ly0 += 40;
         }
-
-
     }
-    
 
     void CreateLineMaterial()
     {
@@ -345,6 +341,7 @@ public class mainScript : MonoBehaviour
     }
     void OnPostRender()
     {
+        GL.Flush();
         GL.PushMatrix();
 
         CreateLineMaterial();
@@ -408,8 +405,9 @@ public class mainScript : MonoBehaviour
         #region Draw Snails
         if (Runing)
         {
+            int ShiftI = -Snails.Length / 2;
             for (int i = 0; i < Snails.Length; i++)
-                DrawSnail(SnailPositions[i],SnailDirTempl[SnailDirections[i]], d, Snails[i].GetColor());
+                DrawSnail(SnailPositions[i],SnailDirTempl[SnailDirections[i]], d, Snails[i].GetColor(), ShiftI++);
         }
         #endregion Draw Snails
 
@@ -437,10 +435,10 @@ public class mainScript : MonoBehaviour
             GL.Vertex3(center.x - size.x, center.y + size.y, 0);
         }
     }
-    void DrawSnail(Vector2Int SPos, Vector2Int VDir, Vector2 d, Color snailColor)
+    void DrawSnail(Vector2Int SPos, Vector2Int VDir, Vector2 d, Color snailColor, int SShift)
     {
         Vector2 gap = d*0.2f;
-        Vector2 p0 = (SPos+Offset) * d+ GridRectF.min;
+        Vector2 p0 = (SPos+Offset) * d+ GridRectF.min+SShift*d/5f;
         Vector2 c0 = p0 + d / 2f;
 
         GL.Begin(GL.QUADS);
@@ -470,6 +468,10 @@ public class mainScript : MonoBehaviour
             string str = "";
             str += StartCell.Value.x.ToString() + "," + StartCell.Value.y + ",";
             str += FinishCell.Value.x.ToString() + "," + FinishCell.Value.y + ",";
+
+            var a = Cells.ToArray<Vector2Int>();
+            string.Join(str, Cells);
+
             foreach (Vector2Int ci in Cells)
                 if (ci != FinishCell.Value)
                     str += ci.x.ToString() + "," + ci.y.ToString() + ","; 
